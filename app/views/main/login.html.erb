@@ -1,0 +1,49 @@
+
+
+
+<head>
+	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+	
+	<div class="container">
+		<div class="jumbotron">
+			<form class = "well">
+				<h2>
+					<% if @message == "Logout" %>
+					<% elsif @message == nil %>
+					Administrative Login
+  					
+						
+					<%else%>
+					<% @message != nil %>
+						<%= @message %>
+					
+					<% end %>
+				</h2>
+				<p>
+					<%= text_field_tag "username", "", placeholder: "Username" %>
+					<%= text_field_tag "password", "", placeholder: "Password" %>
+				</p>
+				<p>
+					<button class = "btn btn-primary">Submit</button>
+					<button class = "btn">Clear</button>
+				</P>
+			</form>
+	    <h2>Patient Search</h2>
+			<p>
+				<%= label_tag ""%>
+				<%= text_field_tag "name", "", placeholder: "Not logged in" %>
+				<%= text_field_tag "name", "", placeholder: "Not logged in" %>
+				<%= text_field_tag "name", "", placeholder: "Not logged in" %>
+				<%= text_field_tag "pat_id", "", placeholder: "Not logged in" %>
+			</p>
+	    <p>
+				<button class = "btn">Clear</button>
+			</p>
+	  </div>
+	</div>
+
+
+
