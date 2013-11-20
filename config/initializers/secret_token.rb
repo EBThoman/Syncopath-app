@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-SyncopathApp::Application.config.secret_key_base = '8df11a5f7e764f7d74446e2311550eca367cc16e3527544537940f2f1cfbb8b57ba740412c262eff4a15771298ddd9d0876b5ec6b9ba5114393be7f2b66ed2ff'
+SyncopathApp::Application.config.secret_key_base = Rails.env.production? ? ENV['SESSION_SECRET'] : '8df11a5f7e764f7d74446e2311550eca367cc16e3527544537940f2f1cfbb8b57ba740412c262eff4a15771298ddd9d0876b5ec6b9ba5114393be7f2b66ed2ff'

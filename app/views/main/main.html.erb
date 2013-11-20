@@ -1,0 +1,135 @@
+
+
+<head>
+	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+	
+  <div class="container">
+		<div class="navbar navbar-default navbar-fixed-top" "span>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Syncopath.app</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Patient Summary</a></li>
+          <li><a href="#">Patient Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Sign In</a></li>
+        </ul>
+      </div>
+    </div>
+	
+	<div class="container">
+		<div class="jumbotron">
+			<form class = "well">
+				<h2><%= @user_id %>, you are now logged in</h2>
+				
+				<p>
+					<button class = "btn btn-warning">Logout</button>
+				</P>
+			</form>
+	    <h2>Patient Search</h2>
+			<p>
+				<%= label_tag "name"%>
+				<%= text_field_tag "l_name", "", placeholder: "Last" %>
+				<%= text_field_tag "f_name", "", placeholder: "First" %>
+				<%= text_field_tag "m_name", "", placeholder: "Middle" %>
+				<%= text_field_tag "pat_id", "", placeholder: "Patient ID" %>
+			</p>
+	    <p>
+				<a class="btn btn-primary btn-lg">Submit</a>
+				<button class = "btn">Clear</button>
+			</p>
+	  </div>
+	</div>
+
+ 
+<div class="container">
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Form Catalog</div>
+  <div class="panel-body">
+    <p>Please sellect the forms required for transmission. Drag and drop to patient's file and send</p>
+  </div>
+
+  <!-- Table -->
+	<table class="table table-striped text-center">
+		<thead>
+			<tr>
+      	<th class="text-left">Form Name</th>
+				<th class="text-center">Pages</th>
+      	<th class="text-center">Type</th>
+      	<th class="text-center"></th>
+			</tr>
+		</thead>
+		<tbody>
+      <tr>
+        <td class="text-left">First Time Patient</td>
+        <td>1 pg</td>
+        <td>PDF</td>
+        <td><i class="icon-folder-close-alt"></i></td>
+      </tr>
+      <tr>
+        <td class="text-left">General Admittance</td>
+        <td>5 pg</td>
+        <td>PDF</td>
+        <td><i class="icon-folder-close-alt"></i></td>
+      </tr>
+      <tr>
+        <td class="text-left">Emergency Admittance</td>
+        <td>10 pg</td>
+        <td>PDF</td>
+        <td><i class="icon-folder-close-alt"></i></td>
+      </tr>
+      <tr>
+        <td class="text-left">Labs</td>
+        <td>1 pg</td>
+        <td>PDF</td>
+        <td><i class="icon-folder-close-alt"></i></td>
+      </tr>
+      <tr>
+        <td class="text-left">Flu Clinic</td>
+        <td>1 pg</td>
+        <td>PDF</td>
+        <td><i class="icon-folder-close-alt"></i></td>
+      </tr>
+      <tr>
+        <td class="text-left">Dialysis</td>
+        <td>2 pg</td>
+        <td>PDF</td>
+        <td><i class="icon-folder-close-alt"></i></td>
+      </tr>
+      <tr>
+        <td class="text-left">Dermatology</td>
+        <td>3 pg</td>
+        <td>PDF</td>
+        <td><i class="icon-folder-close-alt"></i></td>
+      </tr>
+      <tr>
+        <td class="text-left">Travel Clinic</td>
+        <td>5 pg</td>
+        <td>PDF</td>
+        <td><i class="icon-folder-close-alt"></i></td>
+      </tr>
+      <tr>
+        <td class="text-left">Physical Therapy</td>
+        <td>1 pg</td>
+        <td>PDF</td>
+        <td><i class="icon-folder-close-alt"></i></td>
+      </tr>
+    </tbody>
+	</table>
+</div>
+</div>
+</div>
+
+</body>

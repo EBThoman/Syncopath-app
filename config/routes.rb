@@ -1,6 +1,14 @@
 SyncopathApp::Application.routes.draw do
   
   get "/" => "main#login"
+  get "/login" => "main#login"
+  post "/login" => "main#login_post"
+  get "/main" => "main#main"
+  post "/main" => "main#main_post"
+  get "/clients/:id" => "main#patient_details"
+  post "clients/:id" => "main#patient_details_post"
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

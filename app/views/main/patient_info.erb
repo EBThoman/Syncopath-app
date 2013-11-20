@@ -1,0 +1,31 @@
+<head>
+	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+	
+	<div class="container">
+		<div class="jumbotron">
+			<form class = "well">
+				
+				<% if @message != nil %>
+  				<p><%= @message %><p>
+					<% end %>
+
+					<h1>Patient Information:</h1>
+
+					<p>
+  					<%= @clientel.first_name %> <%= @clientel.last_name %> (with a middle name of <%= @clientel.middle_name %>), lives at <%= @clientel.street_number %> <%= @clientel.street_name %> Denver, CO.<br>
+	
+	Can be reached at <%= @clientel.phone_number %> and contacted at <%= @clientel.email %><br>
+	
+And is insured by <%= @clientel.insurance_co %>	
+ 
+					</p>
+
+					<p><a href="/login">Back to login</a></p>
+
+				</form>
+			</div>
+		</div>
+</body>
