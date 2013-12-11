@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SyncopathApp</title>
+	
+	<title>SyncopathApp</title>
+	
+	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	
+ 
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+	
+
+	
 </head>
 <body>
+	
+<% if flash[:error] != nil %>
+	 <div class="alert alert-danger">
+	   <%= flash[:error] %>
+	 </div>
+<% end %>
 
 <%= yield %>
 

@@ -1,10 +1,6 @@
 
+<%= form_tag "/login" do %>
 
-<head>
-	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-</head>
-<body>
 	
   <div class="container">
 		<div class="navbar navbar-default navbar-fixed-top" "span>
@@ -34,7 +30,7 @@
 				<h2><%= @user_id %>, you are now logged in</h2>
 				
 				<p>
-					<button class = "btn btn-warning">Logout</button>
+					<%= submit_tag "Logout", class: "btn btn-warning" %>
 				</P>
 			</form>
 	    <h2>Patient Search</h2>
@@ -46,8 +42,7 @@
 				<%= text_field_tag "pat_id", "", placeholder: "Patient ID" %>
 			</p>
 	    <p>
-				<a class="btn btn-primary btn-lg">Submit</a>
-				<button class = "btn">Clear</button>
+				<%= submit_tag "Submit", class: "btn" %>
 			</p>
 	  </div>
 	</div>
@@ -132,4 +127,4 @@
 </div>
 </div>
 
-</body>
+<% end %>

@@ -1,11 +1,6 @@
 
+<%= form_tag "/login" do %>
 
-
-<head>
-	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-</head>
-<body>
 	
 	<div class="container">
 		<div class="jumbotron">
@@ -27,8 +22,8 @@
 					<%= text_field_tag "password", "", placeholder: "Password" %>
 				</p>
 				<p>
-					<button class = "btn btn-primary">Submit</button>
-					<button class = "btn">Clear</button>
+					<%= submit_tag "Submit", class: "btnbtn-primary" %>
+					<%= submit_tag "Clear", class: "btn" %>
 				</P>
 			</form>
 	    <h2>Patient Search</h2>
@@ -40,10 +35,10 @@
 				<%= text_field_tag "pat_id", "", placeholder: "Not logged in" %>
 			</p>
 	    <p>
-				<button class = "btn">Clear</button>
+				<%= submit_tag "Clear", class: "btn" %>
 			</p>
 	  </div>
 	</div>
 
 
-
+	<% end %>

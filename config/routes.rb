@@ -5,6 +5,7 @@ SyncopathApp::Application.routes.draw do
   post "/login" => "main#login_post"
   get "/main" => "main#main"
   post "/main" => "main#main_post"
+  get "/patient_info" => "main#patient_info"
   get "/clients/:id" => "main#patient_details"
   post "clients/:id" => "main#patient_details_post"
   

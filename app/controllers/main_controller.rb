@@ -19,23 +19,34 @@ class MainController < ApplicationController
 
         if found_desirable == nil
           @message = "Unknown username"
+          flash.now[:error] = "Incorrect username"
           render :login and return
+          # redirect "/" and return
 
  
         elsif found_desirable.authenticate(password) == false
           @message = "Incorrect password"
+          flash.now[:error] = "Incorrect password"
           render :login and return
+          # redirect "/" and return
 
         else
           session[:user_id] = found_desirable.id
           session[:username] = found_desirable.username
-          render :main and return
+          redirect_to :main and return
+          # render :main and return
         end  
       end  
     
   end
   
+  def main
+    render :main and return
+  end
   
+  def patient_info
+    render :patient_info
+  end
   
   
   
