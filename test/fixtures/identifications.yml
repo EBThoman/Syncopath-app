@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ssn: MyString
+  medical_id: MyString
+  position_in_family: MyString
+
+two:
+  ssn: MyString
+  medical_id: MyString
+  position_in_family: MyString

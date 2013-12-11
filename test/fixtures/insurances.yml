@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  insurer_one: MyString
+  insurance_type: MyString
+  policy_no: MyString
+  group_no: MyString
+  insurance_phone: MyString
+  insurer_two: MyString
+  insurance2_type: MyString
+  policy2_no: MyString
+  group2_no: MyString
+  insurance2_phone: MyString
+
+two:
+  insurer_one: MyString
+  insurance_type: MyString
+  policy_no: MyString
+  group_no: MyString
+  insurance_phone: MyString
+  insurer_two: MyString
+  insurance2_type: MyString
+  policy2_no: MyString
+  group2_no: MyString
+  insurance2_phone: MyString
