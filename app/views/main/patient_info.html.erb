@@ -1,0 +1,15 @@
+<%= form_tag "/patient_info" do %>
+
+<div class="container">
+	<div class="jumbotron">
+		<form class = "well">
+			<h1>Patient Information:</h1>
+			
+			<p><%= text_field_tag "fname", "First", size: 10 %> <%= text_field_tag "mname", "Middle", size: 10 %> <%= text_field_tag "lname", "Last", size: 10 %></P>
+
+				<p><a href="/login">Back to login</a></p>
+		</form>
+	</div>
+</div>
+		
+<% end %>
