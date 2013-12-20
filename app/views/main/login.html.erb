@@ -22,19 +22,20 @@
 					<%= text_field_tag "password", "", placeholder: "Password" %>
 				</p>
 				<p>
-					<%= submit_tag "Submit", class: "btnbtn-primary" %>
+					<%= submit_tag "Submit", class: "btn btn-primary" %>
 					<%= submit_tag "Clear", class: "btn" %>
 				</P>
 			</form>
 	    <h2>Patient Search</h2>
 			<p>
-				<%= label_tag ""%>
+				Name<br>
 				<%= text_field_tag "name", "", placeholder: "Not logged in" %>
 				<%= text_field_tag "name", "", placeholder: "Not logged in" %>
-				<%= text_field_tag "name", "", placeholder: "Not logged in" %>
+				<%= text_field_tag "name", "", placeholder: "Not logged in" %><br>Or<br>
 				<%= text_field_tag "pat_id", "", placeholder: "Not logged in" %>
 			</p>
 	    <p>
+				<%= submit_tag "Logout", class: "btn btn-warning" %>
 				<%= submit_tag "Clear", class: "btn" %>
 			</p>
 	  </div>

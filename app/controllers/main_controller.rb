@@ -41,7 +41,18 @@ class MainController < ApplicationController
   end
   
   def main
+    @username = session[:username]
     render :main and return
+  end
+  
+  def main_post
+    if params["commit"] == "Clear"
+      params.clear
+      redirect_to "/" and return
+    elsif params["commit"] == "Logout"
+      params.clear  
+      redirect_to "/" and return
+    end
   end
   
   def patient_info
